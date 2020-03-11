@@ -197,12 +197,12 @@ __install_installer_deps() {
 __install_bro() {
 	case "$_OS" in
 		Ubuntu)
-			__add_deb_repo "deb http://download.opensuse.org/repositories/network:/bro/xUbuntu_$(lsb_release -rs)/ /" \
+			__add_deb_repo "deb http://download.opensuse.org/repositories/security:/zeek/xUbuntu_$(lsb_release -rs)/ /" \
 				"Bro" \
-				"http://download.opensuse.org/repositories/network:bro/xUbuntu_$(lsb_release -rs)/Release.key"
+				"http://download.opensuse.org/repositories/security:/zeek/xUbuntu_$(lsb_release -rs)/Release.key"
 			;;
 		CentOS|RedHatEnterprise|RedHatEnterpriseServer)
-			__add_rpm_repo http://download.opensuse.org/repositories/network:bro/CentOS_7/network:bro.repo
+			__add_rpm_repo http://download.opensuse.org/repositories/security:/zeek/CentOS_7/security:zeek.repo
 			;;
 	esac
 	__install_packages bro broctl
